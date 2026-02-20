@@ -1,0 +1,23 @@
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+
+.page-surface {
+  background: var(--bg);
+}
+/* Tighten spacing between About and Projects */
+
+.about {
+  padding-bottom: 60px;
+}
+
+#projects {
+  padding-top: 60px;
+}

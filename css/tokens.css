@@ -1,0 +1,79 @@
+/* =========================================
+   DESIGN TOKENS — AVY PORTFOLIO
+========================================= */
+
+:root {
+
+  /* ===============================
+     COLOR SYSTEM
+  =============================== */
+
+  --bg: #000000;                 /* Main background */
+  --surface: #111111;            /* Cards / panels */
+  --surface-elevated: #1a1a1a;   /* Slightly raised sections */
+  
+  --text: #f5f5f5;               /* Primary text */
+  --text-muted: #9e9e9e;         /* Secondary text */
+  --text-subtle: #6f6f6f;        /* Labels / eyebrow */
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+
+  --accent: #b7c3a8;          /* soft sage green */
+--accent-contrast: #111111;
+
+  /* ===============================
+     TYPOGRAPHY SCALE
+  =============================== */
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 4rem;
+
+  /* ===============================
+     SPACING SYSTEM
+  =============================== */
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+  --space-section: 120px;
+
+  /* ===============================
+     LAYOUT
+  =============================== */
+
+  --max-width: 1200px;
+  --container-padding: 5%;
+
+  /* ===============================
+     BORDER RADIUS
+  =============================== */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* ===============================
+     TRANSITIONS
+  =============================== */
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ===============================
+     SHADOWS (Subtle, Dark UI)
+  =============================== */
+
+  --shadow-sm: 0 5px 20px rgba(0,0,0,0.25);
+  --shadow-md: 0 10px 40px rgba(0,0,0,0.35);
+
+}
