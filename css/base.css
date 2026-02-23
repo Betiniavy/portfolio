@@ -33,3 +33,46 @@ h1, h2, h3 {
   font-weight: 600;
   line-height: 1.2;
 }
+/* =========================================
+   TYPOGRAPHY SYSTEM — TECHNICAL
+========================================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;          /* slightly tighter */
+  font-weight: 400;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings = strong + tight */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.025em;  /* sharper */
+  line-height: 1.2;
+}
+
+/* Stronger hierarchy */
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Paragraphs less washed-out */
+p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Reduce over-muted usage */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}

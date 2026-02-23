@@ -1,33 +1,44 @@
 /* =========================================
    GSAP SETUP
 ========================================= */
+
 gsap.registerPlugin(ScrollTrigger);
 
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
+const isDesktop = window.innerWidth > 768;
+
+
 /* =========================================
-   HERO PIN (CLEAN SYSTEM)
+   HERO PIN (DESKTOP ONLY)
 ========================================= */
-if (!prefersReducedMotion) {
+
+if (!prefersReducedMotion && isDesktop) {
   ScrollTrigger.create({
     trigger: ".hero",
     start: "top top",
     end: "bottom top",
     pin: true,
-    pinSpacing: false   // critical: prevents extra gap
+    pinSpacing: false
   });
 }
+
+
+/* =========================================
+   HERO ENTRANCE
+========================================= */
+
 if (!prefersReducedMotion) {
   gsap.fromTo(
     ".hero .eyebrow, .hero h1, .hero .hero-note, .hero .btn-primary",
-    { opacity: 0, y: 20 },
+    { opacity: 0, y: 16 },
     {
       opacity: 1,
       y: 0,
       duration: 0.8,
-      ease: "power2.out",
+      ease: "power3.out",
       stagger: 0.12,
       delay: 0.2
     }
@@ -36,15 +47,16 @@ if (!prefersReducedMotion) {
 
 
 /* =========================================
-   HERO FLOATING LAYERS
+   HERO FLOATING LAYERS (DESKTOP ONLY)
 ========================================= */
-if (!prefersReducedMotion && document.querySelector(".hero-layer")) {
+
+if (!prefersReducedMotion && isDesktop) {
   const layers = gsap.utils.toArray(".hero-layer");
 
   layers.forEach((layer, i) => {
     gsap.to(layer, {
-      y: (i % 2 === 0 ? -1 : 1) * (40 + i * 8),
-      duration: 3 + i * 0.4,
+      y: (i % 2 === 0 ? -1 : 1) * (30 + i * 6),
+      duration: 3 + i * 0.3,
       ease: "sine.inOut",
       repeat: -1,
       yoyo: true
@@ -52,67 +64,72 @@ if (!prefersReducedMotion && document.querySelector(".hero-layer")) {
   });
 }
 
+
 /* =========================================
    SECTION REVEALS
 ========================================= */
+
 if (!prefersReducedMotion) {
   gsap.utils.toArray(".section").forEach(section => {
 
     const heading = section.querySelector("h2");
-    const content = section.querySelectorAll(
-      "p, .projects-grid, .skills-grid, .cta-actions"
+    const container = section.querySelector(
+      ".case-grid, .projects-grid, .skills-grid, .cta-actions"
     );
 
     if (heading) {
       gsap.from(heading, {
         scrollTrigger: {
           trigger: section,
-          start: "top 80%"
+          start: "top 85%"
         },
-        y: 24,
+        y: 16,
         opacity: 0,
-        duration: 0.6,
-        ease: "power2.out"
+        duration: 0.7,
+        ease: "power3.out"
       });
     }
 
-    if (content.length) {
-      gsap.from(content, {
+    if (container) {
+      gsap.from(container, {
         scrollTrigger: {
           trigger: section,
-          start: "top 75%"
+          start: "top 80%"
         },
         y: 20,
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power2.out"
+        duration: 0.7,
+        ease: "power3.out"
       });
     }
 
   });
 }
 
+
 /* =========================================
    PROJECT CARD STAGGER
 ========================================= */
+
 if (!prefersReducedMotion) {
   gsap.from(".project-card", {
     scrollTrigger: {
       trigger: ".projects-grid",
       start: "top 85%"
     },
-    y: 28,
+    y: 24,
     opacity: 0,
     duration: 0.7,
     stagger: 0.15,
-    ease: "power2.out"
+    ease: "power3.out"
   });
 }
+
 
 /* =========================================
    SKILLS FILTER
 ========================================= */
+
 const filterButtons = document.querySelectorAll(".skills-filter button");
 const skillCards = document.querySelectorAll(".skill-card");
 
@@ -126,21 +143,28 @@ filterButtons.forEach(button => {
     skillCards.forEach(card => {
       const match = card.dataset.category === category;
 
-      gsap.to(card, {
-        autoAlpha: match ? 1 : 0,
-        scale: match ? 1 : 0.96,
-        duration: 0.25,
-        ease: "power2.out"
-      });
+      if (match) {
+        card.classList.remove("hidden");
 
-      card.style.pointerEvents = match ? "auto" : "none";
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
+        );
+
+      } else {
+        card.classList.add("hidden");
+      }
     });
+
   });
 });
+
 
 /* =========================================
    ACCESSIBILITY SAFETY
 ========================================= */
+
 if (prefersReducedMotion) {
   ScrollTrigger.getAll().forEach(trigger => trigger.disable());
 }

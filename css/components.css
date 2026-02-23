@@ -31,13 +31,12 @@
   color: var(--text);
 }
 
-
 /* =========================================
    HERO
 ========================================= */
 
 .hero {
-  min-height: 100vh;
+  min-height: 100dvh; /* better than 100vh on mobile */
   display: flex;
   align-items: center;
   position: relative;
@@ -48,6 +47,9 @@
   position: relative;
   z-index: 2;
   max-width: 650px;
+  .hero-content {
+  margin-top: -6vh;
+}
 }
 
 .eyebrow {
@@ -104,8 +106,11 @@
 .hero-layer {
   position: absolute;
   opacity: 0.15;
-  max-width: 400px;
+  width: clamp(180px, 30vw, 400px); /* responsive scaling */
+  height: auto;
 }
+
+/* Layer positioning */
 
 .layer-1 {
   top: 15%;
@@ -122,8 +127,46 @@
   bottom: 15%;
   right: 8%;
 }
+@media (max-width: 768px) {
 
+  .hero {
+    min-height: 100dvh;
+    align-items: flex-start;
+    padding-top: 14vh;
+  }
 
+  .hero-content {
+    max-width: 340px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 6vw, 2.6rem);
+    line-height: 1.12;
+  }
+
+  .hero-layer {
+    width: 40vw;
+  }
+
+  .layer-1 {
+    top: 8%;
+    left: -15%;
+    opacity: 0.08;
+  }
+
+  .layer-3 {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    opacity: 0.14;
+  }
+
+  .layer-5 {
+    top: 8%;
+    right: -15%;
+    opacity: 0.08;
+  }
+}
 /* =========================================
    ABOUT SECTION
 ========================================= */
@@ -381,30 +424,4 @@
   padding: 0 18px;
   border: 1px solid var(--border);
   color: var(--text-muted);
-}
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .about-media {
-    justify-content: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
 }
