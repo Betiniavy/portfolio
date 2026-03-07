@@ -1,23 +1,40 @@
-.container {
-  width: 90%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-.section {
-  padding-top: var(--space-section);
-  padding-bottom: var(--space-section);
+/* =========================================
+   SECTION SPACING
+========================================= */
+
+section {
+  padding-block: var(--space-section);
+  position: relative;
+  background: var(--bg);
 }
 
+
+/* =========================================
+   PAGE SURFACE
+========================================= */
 
 .page-surface {
   background: var(--bg);
 }
-/* Tighten spacing between About and Projects */
 
-.about {
-  padding-bottom: 60px;
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-#projects {
-  padding-top: 60px;
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }

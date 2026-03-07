@@ -1,263 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avbot — Case Study | Avy</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+<title>Avbot—Case Study | Betini Udoh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+
 </head>
+
 
 <body>
 
 <header class="nav">
-  <div class="container nav-inner">
-    <strong><a href="index.html">Avy</a></strong>
-    <nav>
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#skills">Skills</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Betini Udoh</a>
+
+    <nav class="nav-links">
+
+  <a href="index.html#about">About</a>
+
+  <a href="index.html#skills">Skills</a>
+
+  <a href="index.html#contact" class="nav-cta">Contact</a>
+
+</nav>
+
+    <button class="nav-toggle">☰</button>
   </div>
 </header>
 
-<!-- IMPORTANT: this keeps your page on the same surface as the rest of the site -->
+
+
 <main class="page-surface">
 
-  <!-- CASE HERO -->
-  <section class="case-hero section">
-    <div class="container case-hero-grid">
 
-      <div>
-        <p class="section-label">Case Study</p>
-        <h1>Avbot</h1>
 
-        <p class="case-subtitle">
-          A calm, non-clinical emotional support chatbot designed to guide users through
-          structured self-kindness conversations.
-        </p>
+<!-- HERO -->
 
-        <div class="case-meta">
-          <span><strong>Role:</strong> Frontend Developer (UX & Product focus)</span>
-          <span><strong>Stack:</strong> HTML, CSS, JavaScript, JSON dialogue model</span>
-          <span><strong>Focus:</strong> Conversation state, accessibility, emotional safety</span>
-        </div>
+<section class="section case-hero">
 
-        <div class="cta-actions" style="justify-content:flex-start;">
-          <!-- If you have a live demo, add it here -->
-          <a class="btn-secondary" href="#" target="_blank" rel="noopener">View Demo</a>
-          <!-- Optional repo link -->
-          <a class="btn-link" href="#" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </div>
+<div class="container case-hero-grid">
 
-      <div class="case-hero-visual">
-        <img src="assets/avbot-hero.png" alt="Avbot interface preview">
-      </div>
+<div>
 
-    </div>
-  </section>
+<p class="section-label">Case Study</p>
 
-  <!-- OVERVIEW -->
-  <section class="section">
-    <div class="container case-grid">
-      <h2>Project Overview</h2>
-      <p>
-        Avbot is a lightweight chatbot prototype built to support users in moments of stress or self-criticism.
-        Instead of open-ended AI responses, the experience uses a controlled dialogue flow to keep interactions
-        predictable, calm, and emotionally appropriate.
+<h1>Avbot</h1>
+
+<p class="case-subtitle">
+A conversational chatbot designed to support self-kindness
+and emotional reflection through guided dialogue.
+</p>
+
+<div class="case-meta">
+
+<span><strong>Role:</strong> Designer & Developer</span>
+
+<span><strong>Stack:</strong> HTML, CSS, JavaScript</span>
+
+<span><strong>Focus:</strong> Conversational UX & Emotional Support</span>
+
+</div>
+
+<div class="cta-actions">
+
+<a href="https://betiniavy.github.io/avbot/" target="_blank" class="btn-primary">
+Try Live App
+</a>
+
+<a href="https://github.com/Betiniavy/avbot" target="_blank" class="btn-secondary">
+View Code
+</a>
+
+</div>
+
+</div>
+
+
+<div class="case-hero-visual">
+
+<img src="assets/avbot-mockup.png" alt="Avbot chatbot interface">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section class="section">
+
+<div class="container case-grid">
+
+<h2>Project Overview</h2>
+
+<p>
+Avbot is a conversational interface designed to help users practise self-kindness through guided reflection.
+</p>
+
+<p>
+The chatbot creates a calm digital space where users can pause, acknowledge their emotions, and respond to themselves with greater compassion through supportive prompts.
+</p>
+
+<p>
+Rather than replacing professional mental health support, Avbot encourages small moments of emotional awareness in everyday situations.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- PROBLEM -->
+
+<section class="section alt">
+
+<div class="container case-grid">
+
+<h2>The Problem</h2>
+
+<p>
+Accessing emotional support is not always easy, especially for young adults and people from underrepresented communities. Therapy can be expensive, difficult to access, or avoided due to stigma.
+</p>
+
+<p>
+While digital tools such as Woebot and Wysa exist, many rely heavily on AI models that can produce unpredictable responses and often require personal data.
+</p>
+
+<p>
+This project explores whether a simpler, structured chatbot could offer a safe and accessible way for users to practise self-kindness through guided conversation.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- DESIGN APPROACH -->
+
+<section class="section">
+
+<div class="container case-grid">
+
+<h2>Design Approach</h2>
+
+<p>
+The project followed a Human-Centred Design Thinking approach, focusing on understanding user needs before designing the interaction. The process moved through stages of empathising with users, defining the problem, exploring ideas, prototyping, and testing.
+</p>
+
+<p>
+This approach was chosen because it prioritises empathy, inclusivity, and accessibility particularly important when designing tools related to emotional wellbeing.
+</p>
+
+<p>
+Figma was used to design interface mockups and conversation flows before development. The chatbot was then implemented as a lightweight browser application using HTML, CSS, and JavaScript.
+</p>
+
+<p>
+Early usability feedback was gathered through think-aloud testing and a walkthrough session with a project supervisor to refine the conversational flow and interaction design.
+</p>
+
+<p>
+Because the project involves emotional wellbeing, ethical considerations were also important. A visible safety banner clarifies that Avbot is not a crisis service and provides links to appropriate support resources.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ARCHITECTURE -->
+
+<section class="section alt">
+
+<div class="container case-grid">
+
+<h2>Architecture</h2>
+
+<p>
+Avbot is implemented as a lightweight frontend application using HTML, CSS, and JavaScript.
+</p>
+
+<p>
+The chatbot is powered by a structured conversation engine where dialogue nodes are defined in a flow configuration. Each node specifies the type of interaction (message, input, or choice), the emotional intervention used, and the next step in the conversation.
+</p>
+
+<p>
+Conversation elements are rendered dynamically in the chat interface as the dialogue progresses, allowing the reflection experience to adapt to user input while keeping responses predictable and safe.
+</p>
+
+<img src="assets/Architeture-diagram.png"
+alt="Avbot architecture diagram">
+
+</div>
+
+</section>
+
+
+
+<!-- LIVE APPLICATION -->
+
+<section class="section">
+
+<div class="container case-grid">
+
+<h2>Live Application</h2>
+
+<p>
+Avbot is deployed as a live web application and can be accessed directly in the browser.
+</p>
+
+<p>
+The hosted version demonstrates the complete reflection experience including the entry interface, safety notice, and guided conversational flow.
+</p>
+
+<div class="cta-actions">
+
+<a href="https://betiniavy.github.io/avbot/" target="_blank" class="btn-primary">
+Open Avbot
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- KEY FEATURES -->
+
+<section class="section alt">
+
+<div class="container case-grid">
+
+<h2>Key Features</h2>
+
+<ul class="case-list">
+
+<li>Structured conversation engine guiding reflection</li>
+
+<li>Emotion identification and validation prompts</li>
+
+<li>Interactive regulation tools (breathing exercise, timed pause, reflection cards)</li>
+
+<li>Session summary showing reflection techniques used</li>
+
+<li>Safety checks for high-risk language with support signposting</li>
+
+<li>Lightweight browser-based implementation</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<div class="architecture-layout">
+
+  <div class="architecture-text">
+    <p>
+      Conversation elements are rendered dynamically in the chat interface
+      as the dialogue progresses. The conversation engine processes user
+      responses and determines the next dialogue node based on the dialogue
+      structure. Dialogue management evaluates decision branches and
+      generates appropriate bot responses while maintaining a safe and
+      predictable interaction flow.
+    </p>
+  </div>
+
+  <div class="architecture-diagram">
+    <img src="assets/avbot-architecture.png" alt="Avbot Architecture Diagram">
+  </div>
+
+</div>
+
+
+
+<!-- OUTCOME -->
+
+<section class="section alt">
+
+<div class="container case-grid">
+
+<h2>Outcome</h2>
+
+<p>
+Avbot demonstrates how structured conversational interfaces can support emotional reflection while remaining ethically responsible and accessible.
+</p>
+
+<p>
+The project highlights how lightweight chatbot systems can guide users through supportive reflection while avoiding the risks associated with fully generative AI systems.
+</p>
+
+<p>
+At the end of each session, users receive a short summary of the reflection techniques they practised, reinforcing the idea of self-kindness as a repeatable skill.
+</p>
+
+</div>
+
+</section>
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div class="footer-left">
+<a href="index.html" class="footer-brand">Betini Udoh</a>
+      <p class="footer-note">
+        Frontend Developer building thoughtful web experiences.
       </p>
-      <p>
-        This project demonstrates product thinking and frontend implementation, with particular focus on
-        conversation state management, readability, and safe interaction design.
-      </p>
     </div>
-  </section>
 
-  <!-- PROBLEM -->
-  <section class="section alt">
-    <div class="container case-grid">
-      <h2>The Problem</h2>
-      <p>
-        Many wellbeing tools feel either too clinical or too generic, and users often abandon experiences that
-        require high effort when they’re already overwhelmed.
-      </p>
-      <p>
-        The goal was to create a low-friction, non-clinical conversational experience that helps users pause,
-        self-regulate, and practice self-kindness—without positioning the product as therapy or crisis support.
-      </p>
+    <div class="footer-links">
+
+      <a href="https://github.com/Betiniavy" target="_blank">
+        <img src="assets/github-icon.svg" alt="GitHub">
+      </a>
+
+      <a href="https://linkedin.com" target="_blank">
+        <img src="assets/linkedin-svg.svg" alt="LinkedIn">
+      </a>
+
+      <a href="mailto:betiniudoh97@gmail.com">
+        <img src="assets/gmail-svg.svg" alt="Email">
+      </a>
+
     </div>
-  </section>
 
-  <!-- GOALS -->
-  <section class="section">
-    <div class="container case-grid">
-      <h2>Goals & Success Criteria</h2>
-      <ul class="case-list">
-        <li>Deliver a calm, emotionally safe tone with clear boundaries</li>
-        <li>Keep interaction short and lightweight (2–3 minutes to complete)</li>
-        <li>Make the flow predictable, with user control at each step</li>
-        <li>Build a maintainable frontend architecture using a structured dialogue model</li>
-        <li>Ensure strong readability and accessibility across devices</li>
-      </ul>
-    </div>
-  </section>
+  </div>
 
-  <!-- VISUALS: FLOW + UI -->
-  <section class="section alt">
-    <div class="container">
-      <h2>Design Snapshot</h2>
-      <p class="case-subtitle" style="max-width: 760px;">
-        The interface is intentionally minimal. The conversation is structured as a decision tree,
-        where each step presents a small, clear set of options.
-      </p>
+  <div class="container footer-bottom">
+    <p>© 2026 Betini Favour Udoh</p>
+  </div>
 
-      <div class="before-after-grid">
-        <figure>
-          <img src="assets/avbot-flow.png" alt="Conversation flow diagram">
-          <figcaption>Conversation flow (node-based structure)</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/avbot-ui.png" alt="Avbot UI screen">
-          <figcaption>UI screen (calm, readable message layout)</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section">
-    <div class="container">
-      <h2>Process</h2>
-
-      <div class="process-grid">
-        <div class="process-card">
-          <h3>Research & Framing</h3>
-          <p>
-            Reviewed existing conversational support tools and defined product boundaries to keep the experience
-            non-clinical, supportive, and easy to engage with.
-          </p>
-        </div>
-
-        <div class="process-card">
-          <h3>Conversation Design</h3>
-          <p>
-            Mapped a structured dialogue tree to maintain predictable tone and safe responses. Designed short
-            prompts to reduce cognitive load and encourage follow-through.
-          </p>
-        </div>
-
-        <div class="process-card">
-          <h3>Frontend Build</h3>
-          <p>
-            Implemented a responsive UI and a JSON-driven conversation model, separating rendering logic from
-            conversation state for maintainability.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECHNICAL IMPLEMENTATION -->
-  <section class="section alt">
-    <div class="container case-grid">
-      <h2>Technical Implementation</h2>
-
-      <ul class="case-list">
-        <li>Built with semantic HTML, modular CSS, and vanilla JavaScript</li>
-        <li>Dialogue stored in a JSON-like structure (nodes, options, transitions)</li>
-        <li>State handled via explicit node IDs to avoid unpredictable responses</li>
-        <li>UI rendering kept separate from flow logic for clean iteration</li>
-        <li>Responsive layout designed for mobile-first readability</li>
-      </ul>
-
-      <p>
-        This architecture keeps the product lightweight and easy to extend while maintaining predictable user experience
-        and emotionally safe boundaries.
-      </p>
-    </div>
-  </section>
-
-  <!-- CHALLENGES -->
-  <section class="section">
-    <div class="container case-grid">
-      <h2>Challenges & Solutions</h2>
-
-      <p>
-        <strong>Managing conversational state cleanly</strong><br>
-        A key challenge was ensuring transitions never broke flow. I used an explicit node-based model
-        (IDs + transitions) so every user action maps to a known next state.
-      </p>
-
-      <p>
-        <strong>Balancing empathy with predictable structure</strong><br>
-        Free-form outputs were avoided in favour of controlled paths. This kept tone consistent and reduced the risk
-        of unhelpful or unsafe responses.
-      </p>
-
-      <p>
-        <strong>Reducing cognitive load</strong><br>
-        Messages were kept short and options limited, improving clarity and preventing decision fatigue.
-      </p>
-    </div>
-  </section>
-
-  <!-- OUTCOME -->
-  <section class="section alt">
-    <div class="container case-grid">
-      <h2>Outcome</h2>
-      <p>
-        The result is a working chatbot prototype that demonstrates safe conversational UX, structured state handling,
-        and a calm interface optimised for readability. The dialogue model is extendable, making it practical to add
-        new modules without rewriting the UI.
-      </p>
-    </div>
-  </section>
-
-  <!-- REFLECTION -->
-  <section class="section">
-    <div class="container case-grid">
-      <h2>Reflection & Next Steps</h2>
-      <ul class="case-list">
-        <li>Add more conversation modules (e.g., confidence, burnout, social anxiety)</li>
-        <li>Introduce an optional journaling step (private, user-controlled)</li>
-        <li>Improve evaluation with structured usability testing</li>
-        <li>Add accessibility enhancements (reduced motion, keyboard-first interactions)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section contact">
-    <div class="container">
-      <h2>Want to see more work?</h2>
-      <p>Explore my other projects or reach out if you’d like to collaborate.</p>
-
-      <div class="cta-actions">
-        <a href="index.html#projects" class="btn-secondary">Back to Projects</a>
-        <a href="mailto:youremail@email.com" class="btn-primary">Get in touch</a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/" class="btn-link" target="_blank" rel="noopener">
-          LinkedIn ↗
-        </a>
-      </div>
-    </div>
-  </section>
-
+</footer>
 </main>
-
-<!-- SCRIPTS -->
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 
+
 </body>
+
 </html>

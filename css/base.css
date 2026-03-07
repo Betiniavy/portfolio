@@ -1,3 +1,7 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
 *,
 *::before,
 *::after {
@@ -10,50 +14,91 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* =========================================
+   BASE BODY
+========================================= */
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "General Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+
+/* =========================================
+   MEDIA
+========================================= */
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
+
+
+/* =========================================
+   LINKS
+========================================= */
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-h1, h2, h3 {
-  font-family: "Fraunces", serif;
-  font-weight: 600;
-  line-height: 1.2;
-}
+
 /* =========================================
-   TYPOGRAPHY SYSTEM — TECHNICAL
+   BUTTON BASE
 ========================================= */
 
-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;          /* slightly tighter */
-  font-weight: 400;
-  color: var(--text);
-  -webkit-font-smoothing: antialiased;
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-/* Headings = strong + tight */
-h1, h2, h3 {
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+/* Default headings */
+
+h1,
+h2,
+h3 {
+  font-family: "General Sans", sans-serif;
   font-weight: 600;
-  letter-spacing: -0.025em;  /* sharper */
+  letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
-/* Stronger hierarchy */
+
+/* Hero heading uses Fraunces */
+
+.hero h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+}
+
+
+/* Heading scale */
+
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
@@ -62,17 +107,44 @@ h3 {
   font-size: 1.25rem;
 }
 
-/* Paragraphs less washed-out */
+
+/* Paragraph readability */
+
 p {
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--text-muted);
+  line-height: 1.7;
+  overflow-wrap: break-word;
 }
 
-/* Reduce over-muted usage */
+
+/* Section labels */
+
 .section-label {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+
+/* =========================================
+   CONTAINER SYSTEM
+========================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

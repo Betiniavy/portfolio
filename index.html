@@ -7,29 +7,36 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="css/tokens.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
+
 <header class="nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Betini</a>
+    <a href="#" class="nav-logo">Betini Udoh</a>
+
     <nav class="nav-links">
       <a href="#about">About</a>
-      <a href="#projects">Work</a>
+      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+<a href="#contact" class="nav-cta">Contact</a>
     </nav>
 
     <button class="nav-toggle">☰</button>
   </div>
 </header>
 
+
 <!-- HERO -->
 <section class="hero">
+
   <div class="hero-bg" aria-hidden="true">
     <img src="assets/yellow-3.png" class="hero-layer layer-1" alt="">
     <img src="assets/green2.png" class="hero-layer layer-3" alt="">
@@ -38,195 +45,312 @@
 
   <div class="container hero-content">
     <p class="eyebrow">Frontend Developer</p>
+
     <h1>
-      Focused on building<br>
-      calm, usable digital products.
-    </h1>
+  Focused on building<br>
+  calm, usable digital<br>
+  products.
+</h1>
+
     <p class="hero-note">
       From concept to production. UX, frontend, and delivery.
     </p>
+
     <a href="#projects" class="btn-primary">
       View selected work
     </a>
   </div>
+
 </section>
+
+
+<!-- ABOUT -->
 <section id="about" class="about">
 
-  <!-- ABOUT GRID -->
-  <div class="container about-grid">
-    <div class="about-text">
-      <p class="section-label">About</p>
-      <h2>Who I Am & How I Work</h2>
+<div class="container about-grid">
 
-      <p>
-        I’m a frontend developer who notices the small things, like when a font feels off or spacing 
-        doesn't sit right, or the overall flow of a design feels slightly wrong.
-      </p>
+  <div class="about-text">
 
-      <p>
-        I care deeply about aesthetics and structure. I like things to feel simple,
-        intentional, and easy to move through. Creating user-friendly experience 
-        doesn't mean boring to me, it means thoughtful.
-        When i finish a project, there's always a quiet moment where i think, "wow, i actually
-        built this." I enjoy the process of adjusting, refining, and shaping ideas
-        until it feels rights.
-    
-      </p>
+    <p class="section-label">About</p>
 
-      <p class="about-highlight">
-       Im naturally calm and reflective. I take my time to make sure things arent just working
-      but working well. For me, good design should feel effortless for users even if a 
-    lot of care went into making it that way.      </p>
-    </div>
-
-    <div class="about-media">
-      <img
-        src="assets/about-me.jpeg"
-        alt="Portrait of Avy, frontend developer"
-        loading="lazy"
-      />
-    </div>
-  </div>
-  
-   <!-- SELECTED WORK -->
-  <div id="projects" class="container projects-flow">
-    <header class="projects-header">
-      <p class="section-label">Selected Work</p>
-      <h2>Projects</h2>
-      <p class="projects-intro">
-        A selection of projects where I focused on clarity, usability,
-        and thoughtful frontend execution.
-      </p>
-    </header>
-
-    <div class="projects-grid">
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="assets/Group-2.png"
-               alt="MJ Sanding website mockup"
-               loading="lazy" />
-        </div>
-
-        <div class="project-content">
-          <h3>MJ Sanding</h3>
-          <p class="project-meta">Live Client Website · Design & Frontend</p>
-          <p class="project-description">
-            Conversion-focused website for a real client, designed and built
-            end-to-end with performance and clarity in mind.
-          </p>
-<a href="mj-sanding.html" class="project-link">
-  View case study →
-</a>        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="assets/avbot-mockup.png"
-               alt="Emotional Support Chatbot interface mockup"
-               loading="lazy" />
-        </div>
-
-        <div class="project-content">
-          <h3>Emotional Support Chatbot</h3>
-          <p class="project-meta">MSc Project · UX & Frontend</p>
-          <p class="project-description">
-            A human-centred digital product designed to promote self-kindness
-            through calm, structured conversational flows.
-          </p>
-<a href="avbot.html" class="project-link">
-  View case study →
-</a>        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <div id="skills" class="container skills-flow">
-
-    <p class="section-label">Skills</p>
-    <h2>Core <span>Technologies</span> & Tools</h2>
-
-    <div class="skills-filter" role="tablist">
-      <button class="active" data-filter="frontend">Frontend</button>
-      <button data-filter="design">UI / Design</button>
-      <button data-filter="tools">Tools</button>
-    </div>
-
-    <div class="skills-grid">
-
-      <div class="skill-card skill-html" data-category="frontend">
-        <img src="assets/icons-html-5.svg" alt="" aria-hidden="true">
-        <span>HTML</span>
-      </div>
-
-      <div class="skill-card skill-css" data-category="frontend">
-        <img src="assets/css-3-svgrepo-com.svg" alt="" aria-hidden="true">
-        <span>CSS</span>
-      </div>
-
-      <div class="skill-card skill-js" data-category="frontend">
-        <img src="assets/javascript-logo-svgrepo-com.svg" alt="" aria-hidden="true">
-        <span>JavaScript</span>
-      </div>
-
-      <div class="skill-card skill-figma" data-category="design">
-        <img src="assets/figma-logo.svg" alt="" aria-hidden="true">
-        <span>Figma</span>
-      </div>
-
-      <div class="skill-card skill-photoshop" data-category="design">
-        <img src="assets/codepen-svgrepo-com.svg" alt="" aria-hidden="true">
-        <span>Photoshop</span>
-      </div>
-
-      <div class="skill-card skill-canva" data-category="design">
-        <img src="assets/adobe-xd-1-logo-svgrepo-com.svg" alt="" aria-hidden="true">
-        <span>Canva</span>
-      </div>
-
-      <div class="skill-card skill-github" data-category="tools">
-        <img src="assets/git-svgrepo-com.svg" alt="" aria-hidden="true">
-        <span>Git / GitHub</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div id="contact" class="container content-block contact-flow">
-
-    <p class="section-label">Contact Us</p>
-    <h2>Let’s Work Together</h2>
+    <h2>Who I Am & How I Work</h2>
 
     <p>
-      If you’re looking for someone who values clarity,
-      users, and quality.
+      I’m a frontend developer who notices the small things when a font feels slightly off,
+      when spacing doesn’t sit right, or when the overall flow of a design feels just a little wrong.
     </p>
 
-    <div class="cta-actions">
-<a href="mailto:betiniudoh97@gmail.com" class="btn-primary">
-  Get In Touch
-      </a>
+    <p>
+      I care deeply about aesthetics and structure. I like interfaces to feel simple,
+      intentional, and easy to move through. Creating user-friendly experiences doesn’t
+      mean boring to me it means thoughtful design.
+    </p>
 
-      <a href="assets/Betini-Udoh-CV.pdf" class="btn-secondary" target="_blank">
-        View Resume
-      </a>
+    <p>
+      When I finish a project, there’s always a quiet moment where I think,
+      “Wow, I actually built this.” I enjoy the process of adjusting, refining,
+      and shaping ideas until everything feels right.
+    </p>
 
-      <a href="https://www.linkedin.com/in/betini-udoh-4295aa23a/" 
-   class="btn-link" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  LinkedIn ↗
-</a>
-      </a>
+    <p class="about-highlight">
+      I’m naturally calm and reflective. I take my time to make sure things aren’t just
+      working, but working well. For me, good design should feel effortless for users,
+      even if a lot of care went into making it that way.
+    </p>
+
+  </div>
+
+  <div class="about-media">
+
+    <img
+      src="assets/about-me.jpeg"
+      alt="Portrait of Avy, frontend developer"
+      loading="lazy"
+    />
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+
+<div class="container projects-flow">
+
+  <header class="projects-header">
+    <p class="section-label">Selected Work</p>
+
+    <h2>Projects</h2>
+
+    <p class="projects-intro">
+      A selection of projects where I explored interface design, frontend development, 
+      and the process of turning ideas into working digital experiences.
+    </p>
+  </header>
+
+  <div class="projects-grid">
+
+    <article class="project-card">
+
+      <div class="project-image">
+        <img src="assets/Group-2.png"
+             alt="MJ Sanding website mockup"
+             loading="lazy" />
+      </div>
+
+      <div class="project-content">
+
+        <h3>MJ Sanding</h3>
+
+        <p class="project-meta">
+          Live Client Website · Design & Frontend
+        </p>
+
+        <p class="project-description">
+          Conversion-focused website for a real client, designed and built
+          end-to-end with performance and clarity in mind.
+        </p>
+
+        <a href="mj-sanding.html" class="project-link">
+          View case study →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <article class="project-card">
+
+      <div class="project-image">
+        <img src="assets/avbot-mockup.png"
+             alt="Emotional Support Chatbot interface mockup"
+             loading="lazy" />
+      </div>
+
+      <div class="project-content">
+
+        <h3>Emotional Support Chatbot</h3>
+
+        <p class="project-meta">
+          MSc Project · UX & Frontend
+        </p>
+
+        <p class="project-description">
+          A human-centred digital product designed to promote self-kindness
+          through calm, structured conversational flows.
+        </p>
+
+        <a href="avbot.html" class="project-link">
+          View case study →
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+
+<div class="container skills-flow">
+
+  <p class="section-label">Skills</p>
+
+  <h2>Core <span>Technologies</span> & Tools</h2>
+
+  <div class="skills-filter" role="tablist">
+
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="frontend">Frontend</button>
+    <button data-filter="design">UI / Design</button>
+    <button data-filter="tools">Tools</button>
+
+  </div>
+
+
+  <div class="skills-grid">
+
+    <div class="skill-card skill-html" data-category="frontend">
+      <img src="assets/icons-html-5.svg" alt="HTML logo">
+      <span>HTML</span>
+    </div>
+
+    <div class="skill-card skill-css" data-category="frontend">
+      <img src="assets/css-3-svgrepo-com.svg" alt="CSS logo">
+      <span>CSS</span>
+    </div>
+
+    <div class="skill-card skill-js" data-category="frontend">
+      <img src="assets/javascript-logo-svgrepo-com.svg" alt="JavaScript logo">
+      <span>JavaScript</span>
+    </div>
+
+
+    <div class="skill-card skill-figma" data-category="design">
+      <img src="assets/figma-logo.svg" alt="Figma logo">
+      <span>Figma</span>
+    </div>
+
+    <div class="skill-card skill-photoshop" data-category="design">
+      <img src="assets/codepen-svgrepo-com.svg" alt="Photoshop logo">
+      <span>Photoshop</span>
+    </div>
+
+    <div class="skill-card skill-canva" data-category="design">
+      <img src="assets/adobe-xd-1-logo-svgrepo-com.svg" alt="Canva logo">
+      <span>Canva</span>
+    </div>
+
+
+    <div class="skill-card skill-github" data-category="tools">
+      <img src="assets/git-com.svg" alt="Git logo">
+      <span>Git / GitHub</span>
+    </div>
+
+    <div class="skill-card skill-netlify" data-category="tools">
+      <img src="assets/netlify-com.svg" alt="Netlify logo">
+      <span>Netlify</span>
     </div>
 
   </div>
 
+</div>
+
 </section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+<div class="container content-block contact-flow">
+
+  <p class="section-label">Contact Us</p>
+
+  <h2>Let’s Work Together</h2>
+
+  <p>
+   Need a User friendly website/ like to know more
+  </p>
+
+  <div class="cta-actions">
+
+<a href="mailto:betiniudoh97@gmail.com" class="btn-primary">
+Get In Touch
+</a>
+
+<a href="assets/Betini-Udoh-CV.pdf" class="btn-secondary" target="_blank">
+View Resume
+</a>
+
+<a href="https://www.linkedin.com/in/betini-udoh-4295aa23a/" 
+class="btn-link" 
+target="_blank" 
+rel="noopener noreferrer">
+LinkedIn ↗
+</a>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div class="footer-left">
+
+<a href="index.html" class="footer-brand">
+Betini Udoh
+</a>
+
+      <p class="footer-note">
+        Frontend Developer building thoughtful web experiences.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="https://github.com/Betiniavy" target="_blank">
+<img src="assets/github-icon.svg" alt="GitHub" class="github">
+
+      <a href="https://linkedin.com" target="_blank">
+        <img src="assets/linkedin-svg.svg" alt="LinkedIn">
+      </a>
+
+      <a href="mailto:betiniudoh97@gmail.com">
+        <img src="assets/gmail-svg.svg" alt="Email">
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 Betini Favour Udoh</p>
+  </div>
+
+</footer>
+
+
 <!-- SCRIPTS -->
+
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
+
+</body>
+</html>

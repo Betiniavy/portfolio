@@ -8,21 +8,25 @@ const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
-const isDesktop = window.innerWidth > 768;
-
 
 /* =========================================
    HERO PIN (DESKTOP ONLY)
 ========================================= */
 
-if (!prefersReducedMotion && isDesktop) {
-  ScrollTrigger.create({
-    trigger: ".hero",
-    start: "top top",
-    end: "bottom top",
-    pin: true,
-    pinSpacing: false
-  });
+if (!prefersReducedMotion && window.innerWidth > 768) {
+
+  const hero = document.querySelector(".hero");
+
+  if (hero) {
+    ScrollTrigger.create({
+      trigger: hero,
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false
+    });
+  }
+
 }
 
 
@@ -31,18 +35,26 @@ if (!prefersReducedMotion && isDesktop) {
 ========================================= */
 
 if (!prefersReducedMotion) {
-  gsap.fromTo(
-    ".hero .eyebrow, .hero h1, .hero .hero-note, .hero .btn-primary",
-    { opacity: 0, y: 16 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: "power3.out",
-      stagger: 0.12,
-      delay: 0.2
-    }
+
+  const heroItems = document.querySelectorAll(
+    ".hero .eyebrow, .hero h1, .hero .hero-note, .hero .btn-primary"
   );
+
+  if (heroItems.length) {
+    gsap.fromTo(
+      heroItems,
+      { opacity: 0, y: 16 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.12,
+        delay: 0.2
+      }
+    );
+  }
+
 }
 
 
@@ -50,7 +62,8 @@ if (!prefersReducedMotion) {
    HERO FLOATING LAYERS (DESKTOP ONLY)
 ========================================= */
 
-if (!prefersReducedMotion && isDesktop) {
+if (!prefersReducedMotion && window.innerWidth > 768) {
+
   const layers = gsap.utils.toArray(".hero-layer");
 
   layers.forEach((layer, i) => {
@@ -62,6 +75,7 @@ if (!prefersReducedMotion && isDesktop) {
       yoyo: true
     });
   });
+
 }
 
 
@@ -70,9 +84,11 @@ if (!prefersReducedMotion && isDesktop) {
 ========================================= */
 
 if (!prefersReducedMotion) {
+
   gsap.utils.toArray(".section").forEach(section => {
 
     const heading = section.querySelector("h2");
+
     const container = section.querySelector(
       ".case-grid, .projects-grid, .skills-grid, .cta-actions"
     );
@@ -104,6 +120,7 @@ if (!prefersReducedMotion) {
     }
 
   });
+
 }
 
 
@@ -112,17 +129,23 @@ if (!prefersReducedMotion) {
 ========================================= */
 
 if (!prefersReducedMotion) {
-  gsap.from(".project-card", {
-    scrollTrigger: {
-      trigger: ".projects-grid",
-      start: "top 85%"
-    },
-    y: 24,
-    opacity: 0,
-    duration: 0.7,
-    stagger: 0.15,
-    ease: "power3.out"
-  });
+
+  const projectGrid = document.querySelector(".projects-grid");
+
+  if (projectGrid) {
+    gsap.from(".project-card", {
+      scrollTrigger: {
+        trigger: projectGrid,
+        start: "top 85%"
+      },
+      y: 24,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: "power3.out"
+    });
+  }
+
 }
 
 
@@ -130,34 +153,72 @@ if (!prefersReducedMotion) {
    SKILLS FILTER
 ========================================= */
 
-const filterButtons = document.querySelectorAll(".skills-filter button");
-const skillCards = document.querySelectorAll(".skill-card");
+const filters = document.querySelectorAll(".skills-filter button");
+const cards = document.querySelectorAll(".skill-card");
 
-filterButtons.forEach(button => {
+filters.forEach(button => {
+
   button.addEventListener("click", () => {
-    const category = button.dataset.filter;
 
-    filterButtons.forEach(btn => btn.classList.remove("active"));
+    filters.forEach(btn => btn.classList.remove("active"));
     button.classList.add("active");
 
-    skillCards.forEach(card => {
-      const match = card.dataset.category === category;
+    const filter = button.dataset.filter;
 
-      if (match) {
-        card.classList.remove("hidden");
+    cards.forEach(card => {
 
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
-        );
+      const category = card.dataset.category;
 
+      if (filter === "all" || category === filter) {
+        card.style.display = "flex";
+        card.style.opacity = "1";
       } else {
-        card.classList.add("hidden");
+        card.style.display = "none";
       }
+
     });
 
   });
+
+});
+
+
+/* =========================================
+   MOBILE NAV TOGGLE
+========================================= */
+
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (navToggle && navLinks) {
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  /* Close menu when a link is clicked */
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+
+  });
+
+}
+
+
+/* =========================================
+   CLOSE MOBILE MENU IF RESIZED TO DESKTOP
+========================================= */
+
+window.addEventListener("resize", () => {
+
+  if (window.innerWidth > 768 && navLinks) {
+    navLinks.classList.remove("active");
+  }
+
 });
 
 
