@@ -1,40 +1,58 @@
 /* =========================================
-   SECTION SPACING
+SECTION SPACING
 ========================================= */
 
-section {
-  padding-block: var(--space-section);
-  position: relative;
-  background: var(--bg);
+section{
+  padding-block:var(--space-section);
+  position:relative;
+  background:var(--bg);
 }
 
 
 /* =========================================
-   PAGE SURFACE
+PAGE SURFACE
 ========================================= */
 
-.page-surface {
-  background: var(--bg);
+.page-surface{
+  background:var(--bg);
 }
 
 
 /* =========================================
-   HERO
+CONTAINER
 ========================================= */
 
-.hero {
-  position: relative;
-  overflow: hidden;
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  /* keeps hero vertically balanced */
+  min-height:calc(100dvh - var(--nav-height));
+
+  display:flex;
+  align-items:center;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
 }
