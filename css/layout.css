@@ -1,0 +1,76 @@
+/* =========================================
+SECTION SPACING
+========================================= */
+
+section{
+  padding-block:var(--space-section);
+  position:relative;
+  background:var(--bg);
+}
+
+
+/* =========================================
+PAGE SURFACE
+========================================= */
+
+.page-surface{
+  background:var(--bg);
+}
+
+
+/* =========================================
+CONTAINER
+========================================= */
+
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+
+  /* keeps hero vertically balanced */
+  min-height:calc(100dvh - var(--nav-height));
+
+  display:flex;
+  align-items:center;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:650px;
+}
+/* Active skills category */
+.skills-filter button.active {
+  background: #638b6d;
+  color: #ffffff;
+  border-color: #638b6d;
+}
+
+/* Show only the selected category */
+.skills-grid .skill-card {
+  display: none;
+}
+
+.skills-grid[data-active-category="design"] .skill-card[data-category="design"],
+.skills-grid[data-active-category="frontend"] .skill-card[data-category="frontend"],
+.skills-grid[data-active-category="tools"] .skill-card[data-category="tools"],
+.skills-grid[data-active-category="creative"] .skill-card[data-category="creative"] {
+  display: flex;
+}
